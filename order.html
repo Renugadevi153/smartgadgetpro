@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Details - SmartGadget Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 p-6">
+
+  <div class="max-w-xl mx-auto bg-white p-8 rounded shadow">
+    <h1 class="text-3xl font-bold mb-6 text-center">Order Details</h1>
+    <div id="order-info" class="text-center">
+      <!-- Plan details will be injected here -->
+    </div>
+    <a href="index.html" class="inline-block mt-8 text-blue-600 hover:underline">← Back to Plans</a>
+  </div>
+
+  <script>
+    // Parse URL to get the plan query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get('plan');
+
+    // Plan details data
+    const plans = {
+      basic: {
+        name: 'Basic',
+        price: '$99',
+        features: ['Step & Sleep Tracker', 'Bluetooth Sync'],
+      },
+      pro: {
+        name: 'Pro (Most Popular)',
+        price: '$149',
+        features: ['Heart Rate Monitor', 'Sleep & Fitness Stats', 'Smart Notifications'],
+      },
+      elite: {
+        name: 'Elite',
+        price: '$199',
+        features: ['All Pro Features', 'Waterproof Design', '24/7 Support'],
+      },
+    };
+
+    const orderInfo = document.getElementById('order-info');
+
+    if (plan && plans[plan]) {
+      const selectedPlan = plans[plan];
+      orderInfo.innerHTML = `
+        <h2 class="text-2xl font-semibold mb-4">${selectedPlan.name} Plan</h2>
+        <p class="text-xl font-bold mb-4">${selectedPlan.price}</p>
+        <ul class="mb-6 list-disc list-inside text-left max-w-xs mx-auto">
+          ${selectedPlan.features.map(feature => `<li>${feature}</li>`).join('')}
+        </ul>
+        <button
+          onclick="alert('Order placed for ${selectedPlan.name} plan!')"
+          class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+        >Place Order</button>
+      `;
+    } else {
+      orderInfo.innerHTML = `<p class="text-red-600">Invalid plan selected. Please go back and choose a valid plan.</p>`;
+    }
+  </script>
+
+</body>
+</html>

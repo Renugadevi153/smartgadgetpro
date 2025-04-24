@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartGadget Pro - Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background: linear-gradient(to right, #4f46e5, #6366f1);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .faq-answer {
+  transition: all 0.3s ease;
+}
+.faq-question[aria-expanded="true"] .icon {
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+  
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-600">SmartGadget Pro</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="text-gray-700 hover:text-blue-600">Features</a>
+        <a href="#pricing" class="text-gray-700 hover:text-blue-600">Pricing</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section with Gradient Animation -->
+  <section class="hero-bg text-white py-24 px-6 relative">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">SmartGadget Pro</h1>
+        <p class="text-lg mb-6">Track your health. Stay connected. All in one smartwatch.</p>
+        <a href="#pricing" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition">
+          Pre-Order Now
+        </a>
+      </div>
+      <img src="watch1.avif" alt="Product" class="w-72 md:w-96 mt-10 md:mt-0" />
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-4xl font-bold text-blue-600">10K+</h3>
+        <p class="mt-2">Devices Sold</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-blue-600">4.8/5</h3>
+        <p class="mt-2">Average Rating</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-blue-600">95%</h3>
+        <p class="mt-2">Customer Satisfaction</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Features Section -->
+<section id="features" class="py-20 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12">Top Features of SmartGadget Pro</h2>
+    <div class="grid gap-10 md:grid-cols-3 text-left">
+      
+      <!-- Feature 1 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 8c-1.104 0-2 .672-2 1.5S10.896 11 12 11s2-.672 2-1.5S13.104 8 12 8z"/>
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 14.5c-2.485 0-4.5-2.015-4.5-4.5S9.515 7.5 12 7.5 16.5 9.515 16.5 12 14.485 16.5 12 16.5z"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Advanced Health Sensors</h3>
+        </div>
+        <p>Track heart rate, sleep, SpO₂, and stress with pinpoint precision anytime, anywhere.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M15 17h5l-1.405-1.405M13 5h6M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Smart Notifications</h3>
+        </div>
+        <p>Stay connected with instant call, text, email, and app alerts right on your wrist.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Long Battery Life</h3>
+        </div>
+        <p>Enjoy up to 7 days of usage with a single charge — power that keeps up with you.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 0110 10v1a10 10 0 01-20 0v-1a10 10 0 0110-10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Water & Dust Resistant</h3>
+        </div>
+        <p>IP68 certified to survive rain, sweat, dust, and the toughest workouts.</p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 19V6h6v13m-4-4h2"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Voice Assistant Support</h3>
+        </div>
+        <p>Control your smart life with built-in support for Google Assistant and Alexa.</p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition group">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-blue-600 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 20l9-5-9-5-9 5 9 5z"/>
+            <path d="M12 12V4l9 5M3 9l9 5"/>
+          </svg>
+          <h3 class="text-xl font-semibold ml-3">Built-in Music Control</h3>
+        </div>
+        <p>Skip tracks, pause, and play music directly from your watch — perfect for workouts and walks.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+
+    <div class="space-y-4">
+      <div class="faq-item bg-white p-4 rounded shadow">
+        <button 
+          class="faq-question w-full text-left font-semibold text-lg relative pr-10"
+          aria-expanded="false" 
+          aria-controls="faq1_desc" 
+          id="faq1"
+        >
+          Is SmartGadget Pro compatible with iOS and Android?
+          <span class="icon absolute right-4 top-1/2 transform -translate-y-1/2 text-xl font-bold transition-transform duration-300">+</span>
+        </button>
+        <div id="faq1_desc" class="faq-answer mt-2 hidden px-1">
+          Yes, it's fully compatible with both platforms.
+        </div>
+      </div>
+
+      <div class="faq-item bg-white p-4 rounded shadow">
+        <button 
+          class="faq-question w-full text-left font-semibold text-lg relative pr-10"
+          aria-expanded="false" 
+          aria-controls="faq2_desc" 
+          id="faq2"
+        >
+          How long does the battery last?
+          <span class="icon absolute right-4 top-1/2 transform -translate-y-1/2 text-xl font-bold transition-transform duration-300">+</span>
+        </button>
+        <div id="faq2_desc" class="faq-answer mt-2 hidden px-1">
+          Up to 7 days on a single charge depending on usage.
+        </div>
+      </div>
+
+      <div class="faq-item bg-white p-4 rounded shadow">
+        <button 
+          class="faq-question w-full text-left font-semibold text-lg relative pr-10"
+          aria-expanded="false" 
+          aria-controls="faq3_desc" 
+          id="faq3"
+        >
+          Is it waterproof?
+          <span class="icon absolute right-4 top-1/2 transform -translate-y-1/2 text-xl font-bold transition-transform duration-300">+</span>
+        </button>
+        <div id="faq3_desc" class="faq-answer mt-2 hidden px-1">
+          Yes, it’s IP68 water-resistant, perfect for everyday wear.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  <section id="pricing" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Choose Your Plan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Basic Plan -->
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Basic</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-6">$9<span class="text-base font-normal">/month</span></p>
+          <ul class="space-y-4 mb-6 text-gray-600">
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              1 Smart Device
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Basic Automation
+            </li>
+            <li class="flex items-center text-gray-400 line-through">
+              <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              Voice Assistant Support
+            </li>
+          </ul>
+          <button class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">Get Started</button>
+        </div>
+  
+        <!-- Pro Plan -->
+        <div class="bg-white shadow-lg rounded-2xl p-8 border-4 border-blue-600 scale-105">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Pro</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-6">$19<span class="text-base font-normal">/month</span></p>
+          <ul class="space-y-4 mb-6 text-gray-600">
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              5 Smart Devices
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Advanced Automation
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Voice Assistant Integration
+            </li>
+          </ul>
+          <button class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">Get Pro</button>
+        </div>
+  
+        <!-- Premium Plan -->
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Premium</h3>
+          <p class="text-4xl font-bold text-blue-600 mb-6">$29<span class="text-base font-normal">/month</span></p>
+          <ul class="space-y-4 mb-6 text-gray-600">
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Unlimited Devices
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Smart Scene Scheduling
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              24/7 Customer Support
+            </li>
+          </ul>
+          <button class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">Go Premium</button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">What Our Users Say</h2>
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <p class="text-lg italic mb-4">“SmartGadget Pro is a game-changer! I can't imagine my day without it.”</p>
+        <span class="font-semibold">— RD, Tech Enthusiast</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Newsletter -->
+  <section class="py-16 px-6 bg-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+      <p class="mb-6">Join our newsletter to get the latest updates and exclusive offers.</p>
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="email" placeholder="Enter your email" class="w-full p-3 rounded border" />
+        <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑
+  </button>
+
+  <section id="contact" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800">Get in Touch</h2>
+        <p class="mt-2 text-gray-600">Have a question or want to know more about Smart Gadget Pro? We'd love to hear from you.</p>
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <!-- Contact Form -->
+        <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Full Name</label>
+              <input type="text" placeholder="Renugadevi" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email Address</label>
+              <input type="email" placeholder="you@example.com" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea rows="5" placeholder="Your message..." class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">Send Message</button>
+          </form>
+    
+          <!-- Contact Info -->
+          <div class="bg-blue-50 p-8 rounded-2xl shadow-md">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Contact Info</h3>
+            <p class="text-gray-600 mb-6">Reach out to us directly or visit our office anytime.</p>
+            <ul class="space-y-4 text-gray-700">
+              <li><strong>Email:</strong> rd2004@gmail.com</li>
+              <li><strong>Phone:</strong> +91 9876543210</li>
+              <li><strong>Address:</strong> Tirunelveli, India</li>
+            </ul>
+            <div class="mt-6">
+              <iframe class="rounded-xl w-full h-56" src="https://www.google.com/maps/embed?pb=!1m18..." frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+  
+  
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 SmartGadget Inc. All rights reserved.</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      const answer = document.getElementById(button.getAttribute('aria-controls'));
+      if (!expanded) {
+        answer.classList.remove('hidden');
+      } else {
+        answer.classList.add('hidden');
+      }
+    });
+  });
+  </script>
+  
+</body>
+</html>
